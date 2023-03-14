@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap");
+:root {
+  /*Colors*/
+  /*Primary*/
+  --very-dark-magenta: hsl(300, 43%, 22%);
+  --soft-pink: hsl(333, 80%, 67%);
+
+  /*Neutral*/
+  --dark-grayish-magenta: hsl(303, 10%, 53%);
+  --light-grayish-magenta: hsl(300, 24%, 96%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+main {
+  background: url(bg-pattern-top-mobile);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "League Spartan", sans-serif;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 100vh;
+  background-image: url(/images/bg-pattern-top-mobile.svg),
+    url(/images/bg-pattern-bottom-mobile.svg);
+  background-position: top left, bottom right;
+  background-repeat: no-repeat;
+  background-size: 50%;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.social-review-top {
+  font-family: inherit;
+  margin: 2rem 1rem;
+}
+
+.social-review-title h1 {
+  color: var(--very-dark-magenta);
+  padding: 0 2rem;
+  margin: 2rem;
+  font-weight: 700;
+}
+
+.social-review-title p {
+  font-family: inherit;
+  color: var(--dark-grayish-magenta);
+  line-height: 1.5;
+  font-weight: 400;
+  /*margin-bottom: 2rem;*/
+}
+
+.stars-rating {
+  width: 100%;
+}
+
+.stars {
+  margin: 0.8rem 0;
+  background-color: var(--light-grayish-magenta);
+  border-radius: 0.5rem;
+  padding: 0.5rem 0;
+  line-height: 1.5;
+  font-weight: 700;
+  color: var(--very-dark-magenta);
+  font-family: inherit;
+}
+
+.stars img {
+  margin-right: 0.3rem;
+}
+
+.social-review {
+  display: flex;
+  margin: 1rem;
+  font-family: inherit;
+  background: url(/images/bg-pattern-bottom-mobile.svg) cover no-repeat;
+}
+
+.social-review-card {
+  background-color: var(--very-dark-magenta);
+  color: var(--white);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  height: 100%;
+}
+
+.review-author {
+  display: flex;
+  flex-direction: row;
+  padding-top: 1.5rem;
+  padding-bottom: 0;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  align-items: center;
+}
+
+.review-author img {
+  border-radius: 50%;
+  width: 2.5rem;
+  object-fit: cover;
+  height: 2.5rem;
+  margin-right: 1rem;
+}
+
+.author-name {
+  font-weight: 500;
+}
+
+.verified-buyer {
+  color: var(--soft-pink);
+  margin-top: 0.3rem;
+}
+
+.review-text {
+  padding: 1rem 1rem;
+  line-height: 1.5;
+  text-align: left;
+}
+
+/*Attribution*/
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin: 1rem 0;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+.attribution a span {
+  background: linear-gradient(to right, #6df300 0%, #f52105 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/*Large Screens */
+@media only screen and (min-width: 600px) {
+  body {
+    margin: 2rem 6rem;
+    max-width: 70em;
+    background-image: url(/images/bg-pattern-top-desktop.svg),
+      url(/images/bg-pattern-bottom-desktop.svg);
+    background-position: top left, bottom right;
+    background-repeat: no-repeat;
+    background-size: 50%;
+  }
+
+  section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .social-review-top {
+    margin-top: 0;
+    margin-bottom: 2rem;
+  }
+  .social-review {
+    width: 100%;
+    margin: 0;
+    gap: 1rem;
+  }
+
+  .social-review-title {
+    margin-right: 2rem;
+    max-width: 25rem;
+  }
+  .social-review-title h1 {
+    text-align: left;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--very-dark-magenta);
+    padding: 0;
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+
+  .social-review-title p {
+    text-align: left;
+  }
+
+  .stars-rating {
+    width: 100%;
+  }
+  .stars {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    align-items: center;
+    justify-content: start;
+    width: 25.5rem;
+  }
+  .stars-line {
+    margin: 0 1rem;
+  }
+
+  .stars:nth-child(1) {
+    margin-left: 8rem;
+  }
+
+  .stars:nth-child(2) {
+    margin-left: 11rem;
+  }
+
+  .stars:nth-child(3) {
+    margin-left: 14rem;
+  }
+
+  .social-review {
+    display: flex;
+    height: 18rem;
+  }
+  .social-review-card {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    height: fit-content;
+  }
+  .left-card {
+    margin-top: -3rem;
+  }
+
+  .middle-card {
+    margin: auto 0;
+  }
+
+  .right-card {
+    margin-bottom: -4rem;
+  }
+}
