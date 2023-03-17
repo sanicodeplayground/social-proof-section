@@ -159,14 +159,15 @@ section {
 @media only screen and (min-width: 600px) {
   body {
     margin: 2rem 6rem;
-    max-width: 70em;
-    background-image: url(/images/bg-pattern-top-desktop.svg),
-      url(/images/bg-pattern-bottom-desktop.svg);
+    background-image: url(../images/bg-pattern-top-desktop.svg),
+      url(../images/bg-pattern-bottom-desktop.svg);
     background-position: top left, bottom right;
     background-repeat: no-repeat;
     background-size: 50%;
   }
-
+  p {
+    font-size: 1.3rem;
+  }
   section {
     display: flex;
     flex-direction: row;
@@ -174,7 +175,7 @@ section {
   }
   .social-review-top {
     margin-top: 0;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
   }
   .social-review {
     width: 100%;
@@ -184,11 +185,12 @@ section {
 
   .social-review-title {
     margin-right: 2rem;
-    max-width: 25rem;
+    max-width: 60%;
+    line-height: 1;
   }
   .social-review-title h1 {
     text-align: left;
-    font-size: 3rem;
+    font-size: 5rem;
     font-weight: 700;
     color: var(--very-dark-magenta);
     padding: 0;
@@ -198,10 +200,16 @@ section {
 
   .social-review-title p {
     text-align: left;
+    font-size: 1.5rem;
+    font-weight: 500;
   }
 
   .stars-rating {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    line-height: 1;
   }
   .stars {
     display: flex;
@@ -209,22 +217,18 @@ section {
     padding: 1rem;
     align-items: center;
     justify-content: start;
-    width: 25.5rem;
+    width: 30.5rem;
   }
   .stars-line {
     margin: 0 1rem;
   }
 
   .stars:nth-child(1) {
-    margin-left: 8rem;
+    margin-right: 8rem;
   }
 
   .stars:nth-child(2) {
-    margin-left: 11rem;
-  }
-
-  .stars:nth-child(3) {
-    margin-left: 14rem;
+    margin-right: 4rem;
   }
 
   .social-review {
